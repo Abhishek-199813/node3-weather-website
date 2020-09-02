@@ -12,9 +12,9 @@ const forecast = (longitude,latitude,callback)=>{
             callback('unable to find location. try another seach', undefined)
         }else{
 
-        callback(undefined, body.current.weather_descriptions[0]+
-            body.current.temperature+
-        body.current.feelslike)            
+        callback(undefined, ' Current overcast is '+ body.current.weather_descriptions[0] + ' It is currently '+
+            body.current.temperature + ' degrees out. But it feels like ' +
+        body.current.feelslike + ' degrees. The humidity is ' +body.current.humidity )            
         }
 
     })
